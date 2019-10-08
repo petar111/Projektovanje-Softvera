@@ -97,6 +97,10 @@
       <Project>{B1E891DF-AB38-4DA6-B71E-503111AA0254}</Project>
       <Name>Kontroler</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Security\Security.csproj">
+      <Project>{3A591A45-F755-4776-9FFA-C3DC4530609D}</Project>
+      <Name>Security</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
