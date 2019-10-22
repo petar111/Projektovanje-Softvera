@@ -62,6 +62,7 @@
             this.unosProizvodaToolStripMenuItem.Name = "unosProizvodaToolStripMenuItem";
             this.unosProizvodaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.unosProizvodaToolStripMenuItem.Text = "Unos proizvoda";
+            this.unosProizvodaToolStripMenuItem.Click += new System.EventHandler(this.unosProizvodaToolStripMenuItem_Click);
             // 
             // pretragaProizvodaToolStripMenuItem
             // 

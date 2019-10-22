@@ -12,9 +12,10 @@ namespace FromLogIn
         
         public static void Main()
         {
-            //FrmLogIn frmLogIn = new FrmLogIn();
-            //frmLogIn.ShowDialog();
-
+            FrmLogIn frmLogIn = new FrmLogIn();
+            frmLogIn.ShowDialog();
+            /*
+             * 
             string sifra = "Prsten";
             Console.WriteLine($"Inicijalizovana sifra: {sifra}");
 
@@ -27,7 +28,7 @@ namespace FromLogIn
             string dekriptovanaSifra = EncryptionDecryptionHandler.DecryptString(kriptovanaSifra, secretKey);
 
             Console.WriteLine($"Dekriptovana sifra: {dekriptovanaSifra}");
-
+            */
         }
     }
 }

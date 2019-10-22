@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kontroler;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,12 @@ namespace FromLogIn
         {
             InitializeComponent();
             lblPrijavljeniKorisnik.Text = "Prijavljeni korisnik: " + $"{curr.Ime} {curr.Prezime}";
+        }
+
+        private void unosProizvodaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUnosProizvoda frmUnosProzivoda = new FrmUnosProizvoda();
+            frmUnosProzivoda.ShowDialog();
         }
     }
 }

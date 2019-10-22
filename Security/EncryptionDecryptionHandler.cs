@@ -15,7 +15,13 @@ namespace Security
         public static string GenerateEncryptionKey()
         {
             Random ran = new Random();
-            return "AbCd" + ran.Next().ToString();
+            byte[] tmpBytes = new byte[10];
+            ran.NextBytes(tmpBytes);
+
+            string tmpString = Encoding.Unicode.GetString(tmpBytes);      
+
+            
+            return tmpString + ran.Next().ToString();
         }
 
 

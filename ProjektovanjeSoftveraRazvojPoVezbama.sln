@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kontroler", "Kontroler\Kont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security", "Security\Security.csproj", "{3A591A45-F755-4776-9FFA-C3DC4530609D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerBazePodataka", "BrokerBazePodataka\BrokerBazePodataka.csproj", "{FC665F5D-D2E7-4ADF-9518-7F1923AB7B36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3A591A45-F755-4776-9FFA-C3DC4530609D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A591A45-F755-4776-9FFA-C3DC4530609D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A591A45-F755-4776-9FFA-C3DC4530609D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC665F5D-D2E7-4ADF-9518-7F1923AB7B36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC665F5D-D2E7-4ADF-9518-7F1923AB7B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC665F5D-D2E7-4ADF-9518-7F1923AB7B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC665F5D-D2E7-4ADF-9518-7F1923AB7B36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
