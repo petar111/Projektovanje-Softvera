@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
+    /// <summary>
+    /// Class Proizvodjac represents the oo model of relation Proizvodjac in relation system.
+    /// </summary>
+
     public class Proizvodjac
     {
 

@@ -9,15 +9,33 @@ using System.Windows.Forms;
 
 namespace BrokerBazePodataka
 {
+
+    /// <summary>
+    ///     Class Broker represents logic of manipulating relations in database trough oo model,
+    ///     or said in different manner, connection between these two models.
+    ///     
+    /// </summary>
     public class Broker
     {
+
         private SqlConnection connection;
 
+        /// <summary>
+        /// Makes an instance of Broker class. Also makes the instance of connection field. Has fixed connection string currently.
+        /// </summary>
         public Broker()
         {
             connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog = VezbeSaBazamaPS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         }
 
+
+        /// <summary>
+        ///     Returns all suppliers from Proizvodjac relation using SqlClient classes.
+        /// 
+        /// </summary>
+        /// <returns>
+        ///     All suppliers from Proizvodjac relation.
+        /// </returns>
         public List<Proizvodjac> vratiSveProizvodjace()
         {
             List<Proizvodjac> proizvodjaci = new List<Proizvodjac>();
@@ -59,6 +77,13 @@ namespace BrokerBazePodataka
             return proizvodjaci;        
         }
 
+
+        /// <summary>
+        ///     Returns new id for relation Proizvod. Error may occur, then, it will return -1.
+        /// </summary>
+        /// <returns>
+        ///     New Id for relation Proizvod. -1 if error occurs.
+        /// </returns>
         public int VratiNoviIdProizvoda()
         {
 
@@ -95,8 +120,19 @@ namespace BrokerBazePodataka
             return (int)maxValue + 1;
         }
 
+
+        /// <summary>
+        ///     Inserts new row in relation Proizvod.
+        /// </summary>
+        /// <param name="p">
+        ///     Contents of new row. Reference to an object that represents relation in oo.
+        /// </param>
+        /// <returns>
+        ///     True if insert in successful, false otherwise.
+        /// </returns>
         public bool SacuvajProizvod(Proizvod p)
         {
+            int rowsAffected = 0;
             try
             {
                 connection.Open();
@@ -105,18 +141,17 @@ namespace BrokerBazePodataka
 
                 command.CommandText = $"INSERT INTO Proizvod VALUES({p.ID}, '{p.Ime}', {p.Cena}, {p.Proizvodjac.IDProizvodjaca})";
 
-                command.ExecuteNonQuery();
+                rowsAffected = command.ExecuteNonQuery();
             }
             catch (Exception e)
             {
                 MessageBox.Show("Problem u bazi: " + e.Message);
-                return false;
             }
             finally
             {
                 connection.Close();
             }
-            return true;
+            return rowsAffected == 1;
         }
 
     }

@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
+
+    /// <summary>
+    ///  Class Korisnik represents user in system, the one who calls the system operations.
+    /// </summary>
     public class Korisnik
     {
         public string Ime { get; set; }

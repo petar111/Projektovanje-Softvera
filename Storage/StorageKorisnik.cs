@@ -7,10 +7,24 @@ using System.Threading.Tasks;
 
 namespace Storage
 {
+
+    /// <summary>
+    /// Class StorageKorisnik represents data of objects from class Korisnik stored
+    /// in operative memory.
+    /// </summary>
     public class StorageKorisnik
     {
+
+        /// <summary>
+        /// Data structure for objects from class Korisnik.
+        /// </summary>
         private List<Korisnik> korisnici;
 
+
+
+        /// <summary>
+        ///     Makes an instance of korisnici.
+        /// </summary>
         public StorageKorisnik()
         {
             korisnici = new List<Korisnik>() 
@@ -27,6 +41,11 @@ namespace Storage
         }
 
 
+
+        /// <summary>
+        /// Returns the data stored in operative memory.
+        /// </summary>
+        /// <returns>Data stored in operative memory.</returns>
         public List<Korisnik> vratiKorisnike()
         {
             return korisnici;

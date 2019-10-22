@@ -8,10 +8,18 @@ using System.IO;
 
 namespace Security
 {
+    /// <summary>
+    /// Class EncryptionDecryptionHandler represents
+    /// ecryption and decryption of some object with symetric encryption algorithm
+    /// using derived key method.
+    /// </summary>
     public static class EncryptionDecryptionHandler
     {
 
-        //Generise tajni kljuc za enkripciju pomocu pseudo random algorima koji nudi klasa Random.
+        /// <summary>
+        /// Generates encryption key.
+        /// </summary>
+        /// <returns>Encryption key.</returns>
         public static string GenerateEncryptionKey()
         {
             Random ran = new Random();
@@ -25,7 +33,12 @@ namespace Security
         }
 
 
-        //Enkriptuje dati string
+        /// <summary>
+        /// Encrypts a string.
+        /// </summary>
+        /// <param name="text">String to be encrypted.</param>
+        /// <param name="encKey">Encryption key.</param>
+        /// <returns>Encrypted string.</returns>
         public static string EncryptString(string text, string encKey)
         {
             //Pretvara string u niz bajtova.
@@ -62,7 +75,12 @@ namespace Security
         }
 
 
-        //Enkriptuje dati string
+        /// <summary>
+        /// Decrypts cypered string.
+        /// </summary>
+        /// <param name="cipher">Cypher to be decrypted</param>
+        /// <param name="encKey">Encryption key for decryption.</param>
+        /// <returns>Decrypred string.</returns>
         public static string DecryptString(string cipher, string encKey)
         {
             //Pretvara string u niz bajtova.
